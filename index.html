@@ -178,6 +178,44 @@
       color: white;
       font-size: 0.9em;
     }
+
+    /* Language Proficiency Bars */
+    .proficiency-container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+    .language {
+      margin-bottom: 20px;
+    }
+    .language p {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .bar-frame {
+      width: 100%;
+      height: 25px;
+      border: 2px solid #004c4c;
+      border-radius: 5px;
+      background-color: #e6f7f7; /* Light teal background */
+      overflow: hidden;
+    }
+    .bar {
+      height: 100%;
+      background-color: #004c4c; /* Dark teal */
+      width: 0; /* Starting point */
+      transition: width 0.5s ease-in-out; /* Smooth animation when bars load */
+    }
+    /* Bar Colors for Contrast */
+    .bar.advanced {
+      background-color: #008080; /* Teal */
+    }
+    .bar.intermediate {
+      background-color: #66cccc; /* Light teal */
+    }
+    .bar.beginner {
+      background-color: #b3e0e0; /* Very light teal */
+    }
   </style>
 </head>
 <body>
@@ -205,12 +243,83 @@
   <section class="about" id="about">
     <h2>About Me</h2>
     <div class="profile-pic-container">
-      <img src="./web/img/profile2.jpg" alt="Johannes Rauschenberger" class="profile-pic">
+      <img src="https://johannesrauschenberger.github.io/web/img/profile2.jpg" alt="Johannes Rauschenberger" class="profile-pic">
     </div>
     <p>
       I’m a business student with hands-on experience in finance and a passion for real estate, investment, and entrepreneurship. 
       My goal is to make an impact by building businesses and exploring opportunities in South Africa’s growing markets.
     </p>
+  </section>
+
+  <!-- Language Proficiency Section -->
+  <section class="proficiency-container" id="languages">
+    <h2>Language Proficiency</h2>
+    <div class="language">
+      <p>German (C2)</p>
+      <div class="bar-frame">
+        <div class="bar advanced" style="width: 100%;"></div> <!-- 100% Proficiency -->
+      </div>
+    </div>
+    <div class="language">
+      <p>English (C2)</p>
+      <div class="bar-frame">
+        <div class="bar advanced" style="width: 100%;"></div> <!-- 100% Proficiency -->
+      </div>
+    </div>
+    <div class="language">
+      <p>Afrikaans (C2)</p>
+      <div class="bar-frame">
+        <div class="bar advanced" style="width: 100%;"></div> <!-- 100% Proficiency -->
+      </div>
+    </div>
+    <div class="language">
+      <p>Dutch (B2)</p>
+      <div class="bar-frame">
+        <div class="bar intermediate" style="width: 80%;"></div> <!-- 80% Proficiency -->
+      </div>
+    </div>
+    <div class="language">
+      <p>Spanish (B2)</p>
+      <div class="bar-frame">
+        <div class="bar intermediate" style="width: 80%;"></div> <!-- 80% Proficiency -->
+      </div>
+    </div>
+    <div class="language">
+      <p>Portuguese (B2)</p>
+      <div class="bar-frame">
+        <div class="bar intermediate" style="width: 80%;"></div> <!-- 80% Proficiency -->
+      </div>
+    </div>
+    <div class="language">
+      <p>French (B1)</p>
+      <div class="bar-frame">
+        <div class="bar intermediate" style="width: 60%;"></div> <!-- 60% Proficiency -->
+      </div>
+    </div>
+    <div class="language">
+      <p>Italian (B1)</p>
+      <div class="bar-frame">
+        <div class="bar intermediate" style="width: 60%;"></div> <!-- 60% Proficiency -->
+      </div>
+    </div>
+    <div class="language">
+      <p>Russian (A2)</p>
+      <div class="bar-frame">
+        <div class="bar beginner" style="width: 40%;"></div> <!-- 40% Proficiency -->
+      </div>
+    </div>
+    <div class="language">
+      <p>Setswana (A2)</p>
+      <div class="bar-frame">
+        <div class="bar beginner" style="width: 40%;"></div> <!-- 40% Proficiency -->
+      </div>
+    </div>
+    <div class="language">
+      <p>isiZulu (A1)</p>
+      <div class="bar-frame">
+        <div class="bar beginner" style="width: 20%;"></div> <!-- 20% Proficiency -->
+      </div>
+    </div>
   </section>
 
   <!-- Contact Section -->
