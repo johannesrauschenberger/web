@@ -93,67 +93,67 @@
       <div class="language">
         <p>German (C2)</p>
         <div class="bar-frame">
-          <div class="bar advanced" style="width: 100%;"></div>
+          <div class="bar advanced" data-percentage="100"></div>
         </div>
       </div>
       <div class="language">
         <p>English (C2)</p>
         <div class="bar-frame">
-          <div class="bar advanced" style="width: 100%;"></div>
+          <div class="bar advanced" data-percentage="100"></div>
         </div>
       </div>
       <div class="language">
         <p>Afrikaans (C2)</p>
         <div class="bar-frame">
-          <div class="bar advanced" style="width: 100%;"></div>
+          <div class="bar advanced" data-percentage="100"></div>
         </div>
       </div>
       <div class="language">
         <p>Dutch (B2)</p>
         <div class="bar-frame">
-          <div class="bar intermediate" style="width: 67%;"></div>
+          <div class="bar intermediate" data-percentage="67"></div>
         </div>
       </div>
       <div class="language">
         <p>Spanish (B2)</p>
         <div class="bar-frame">
-          <div class="bar intermediate" style="width: 67%;"></div>
+          <div class="bar intermediate" data-percentage="67"></div>
         </div>
       </div>
       <div class="language">
         <p>Portuguese (B2)</p>
         <div class="bar-frame">
-          <div class="bar intermediate" style="width: 67%;"></div>
+          <div class="bar intermediate" data-percentage="67"></div>
         </div>
       </div>
       <div class="language">
         <p>French (B1)</p>
         <div class="bar-frame">
-          <div class="bar intermediate" style="width: 50%;"></div>
+          <div class="bar intermediate" data-percentage="50"></div>
         </div>
       </div>
       <div class="language">
         <p>Italian (B1)</p>
         <div class="bar-frame">
-          <div class="bar intermediate" style="width: 50%;"></div>
+          <div class="bar intermediate" data-percentage="50"></div>
         </div>
       </div>
       <div class="language">
         <p>Russian (A2)</p>
         <div class="bar-frame">
-          <div class="bar beginner" style="width: 34%;"></div>
+          <div class="bar beginner" data-percentage="34"></div>
         </div>
       </div>
       <div class="language">
         <p>Setswana (A2)</p>
         <div class="bar-frame">
-          <div class="bar beginner" style="width: 34%;"></div>
+          <div class="bar beginner" data-percentage="34"></div>
         </div>
       </div>
       <div class="language">
         <p>isiZulu (A1)</p>
         <div class="bar-frame">
-          <div class="bar beginner" style="width: 17%;"></div>
+          <div class="bar beginner" data-percentage="17"></div>
         </div>
       </div>
     </div>
@@ -196,23 +196,21 @@
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    let fadeElements = document.querySelectorAll(".fade-in");
+document.addEventListener("DOMContentLoaded", function () {
+    const bars = document.querySelectorAll(".bar");
 
-    function fadeInOnScroll() {
-      fadeElements.forEach(el => {
-        let rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.85) { // Triggers when 85% into view
-          el.classList.add("show");
-        }
-      });
-    }
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                let percentage = entry.target.getAttribute("data-percentage");
+                entry.target.style.width = percentage + "%";
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, { threshold: 0.5 });
 
-    window.addEventListener("scroll", fadeInOnScroll);
-    fadeInOnScroll(); // Run on page load
-  });
+    bars.forEach((bar) => observer.observe(bar));
+});
 </script>
-
-
 </body>
 </html>
