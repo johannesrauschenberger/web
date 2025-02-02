@@ -348,3 +348,8 @@ padding: 5px 0; /* Reduce padding to shrink height */
 text-align: center;
 font-size: 14px; /* Adjust if needed */
 }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
