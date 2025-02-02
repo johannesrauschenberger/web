@@ -271,16 +271,6 @@
     margin-top: 70vh; /* Pushes content below the fixed image */
   }
   
-  .parallax {
-    background: url('background.jpg') no-repeat center center/cover;
-    height: 100vh; /* Full screen height */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1; /* Keeps it behind scrolling content */
-  }
-
 
 /* Scrolling Content */
 .content {
