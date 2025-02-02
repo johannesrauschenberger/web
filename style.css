@@ -254,7 +254,7 @@
 
    /* Parallax Background */
    .parallax {
-    background: url('img/background.jpg') no-repeat center center/cover;
+    background: url('https://johannesrauschenberger.github.io/web/img/background.jpg') no-repeat center center/cover;
     height: 100vh; /* Full screen height */
     position: fixed;
     top: 0;
