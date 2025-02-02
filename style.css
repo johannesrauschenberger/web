@@ -359,3 +359,11 @@
   color: gray;
   height: 200px;
 }
+
+footer {
+  background-color: #e6f7f7; /* Light teal */
+  color: black;
+  padding: 5px 0; /* Reduce padding to shrink height */
+  text-align: center;
+  font-size: 14px; /* Adjust if needed */
+}
