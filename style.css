@@ -26,6 +26,12 @@ nav {
   box-sizing: border-box; /* Ensures padding is included in width */
 }
 
+@media (max-width: 600px) {
+  .nav {
+    flex: 1 1 100%;
+  }
+}
+
 nav .logo {
   font-size: 1.5em;
   font-weight: bold;
