@@ -1,14 +1,16 @@
-/* General Styles */
+/* 🔹 General Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -18,49 +20,64 @@ body, html {
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-/* Navbar */
+/* 🔹 General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 🔹 Navbar */
 nav {
-  background-color: #004c4c; /* Dark teal */
-  color: white;
-  padding: 10px 20px;
+  background-color: #004c4c;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: auto; /* Fixes width issue */
-  max-width: 100%;
-  box-sizing: border-box; /* Ensures padding is included in width */
+  padding: 5px 20px;
+  position: relative;
 }
 
-nav .logo {
-  font-size: 1.5em;
-  font-weight: bold;
+nav .logo img {
+  height: 50px;
 }
-nav .nav-links-container {
+
+/* 🔹 Navigation Links (Desktop) */
+.nav-links-container {
   display: flex;
   align-items: center;
 }
-nav ul {
-  display: flex;
-  list-style: none;
-  margin-right: 20px; /* Space between links and LinkedIn button */
+
+/* Ensure the `ul` inside the container is flex */
+.nav-links {
+  display: flex;  /* Make the links inline */
+  list-style: none;  /* Remove bullets */
+  padding: 0;
+  margin: 0;
 }
-nav ul li {
-  margin: 0 10px;
+
+.nav-links li {
+  margin: 0 15px;
 }
-nav ul li a {
+
+.nav-links li a {
   color: white;
   font-weight: bold;
 }
-nav ul li a:hover {
+
+.nav-links li a:hover {
   text-decoration: underline;
 }
-
-.logo img {
-height: 50px; /* Adjust height as needed */
-width: auto; /* Maintain aspect ratio */
-display: block; /* Ensures no extra space below image */
-}
-
 
 /* LinkedIn Button Styles */
 .linkedin-button {
@@ -82,6 +99,75 @@ display: block; /* Ensures no extra space below image */
   background-color: white;
   color: #004c4c; /* Change text to teal on hover */
 }
+
+/* 🔹 Burger Menu (Hidden on Desktop) */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* 🟢 Desktop: Ensure Inline Navbar */
+@media (min-width: 769px) {
+  .nav-links-container {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;  /* Ensure horizontal layout */
+    flex-direction: row;  /* Keep links inline */
+  }
+
+  .burger-menu {
+    display: none;  /* Hide burger on desktop */
+  }
+}
+
+/* 🔴 Mobile: Hide Links Initially, Show Only When Toggled */
+@media (max-width: 768px) {
+  .nav-links-container {
+    display: none; /* Hide initially */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #004c4c;
+    padding: 10px 0;
+    text-align: center;
+    flex-direction: column; /* Stack links vertically */
+  }
+
+  .nav-links-container.active {
+    display: flex; /* Show when active */
+    flex-direction: column;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack links in mobile */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .linkedin-button {
+    margin-top: 10px;
+  }
+
+  .burger-menu {
+    display: flex; /* Show burger on mobile */
+  }
+}
+
+
 
 /* Hero Section */
 .hero {
