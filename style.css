@@ -14,12 +14,6 @@ a {
   color: inherit;
 }
 
-@media (max-width: 600px) {
-  * {
-    flex: 1 1 100%;
-  }
-}
-
 
 /* Navbar */
 nav {
@@ -277,6 +271,7 @@ z-index: -1; /* Sends it behind content */
 .content {
 background-color: rgba(0, 0, 0, 0.85); /* Dark background with transparency */
 color: white;
+width: 100%;
 padding: 50px;
 margin-top: 70vh; /* Pushes content below the fixed image */
 }
