@@ -10,13 +10,23 @@
   <link rel="stylesheet" href="style.css"> <!-- Corrected CSS link -->
 </head>
 <body>
+
   <!-- Navbar -->
   <nav>
     <div class="logo">
       <a href="index.html"><img src="https://johannesrauschenberger.github.io/web/img/logo.png" alt="Logo"></a>
     </div>    
+
+    <!-- Hamburger Icon -->
+    <div class="burger-menu" id="burgerMenu">
+      <div class="burger-bar"></div>
+      <div class="burger-bar"></div>
+      <div class="burger-bar"></div>
+    </div>
+
+    <!-- Navigation Links -->
     <div class="nav-links-container">
-      <ul>
+      <ul class="nav-links">  <!-- Added class for better targeting -->
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -196,6 +206,7 @@
   }
 </script>
 
+  <!-- Language Proficiency Animation -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const bars = document.querySelectorAll(".bar");
@@ -213,5 +224,19 @@ document.addEventListener("DOMContentLoaded", function () {
     bars.forEach((bar) => observer.observe(bar));
 });
 </script>
+
+
+  <!-- Burger Menu Script for mobile -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const burger = document.getElementById("burgerMenu");
+      const navLinksContainer = document.querySelector(".nav-links-container");
+
+      burger.addEventListener("click", function () {
+        navLinksContainer.classList.toggle("active");
+      });
+    });
+  </script>
+
 </body>
 </html>
