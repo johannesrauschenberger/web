@@ -358,4 +358,7 @@ color: black;
 padding: 5px 0; /* Reduce padding to shrink height */
 text-align: center;
 font-size: 14px; /* Adjust if needed */
+width: 100%;
+max-width: 100%;
+box-sizing: border-box;
 }
