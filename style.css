@@ -22,7 +22,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw; /* Ensures navbar spans the full width */
+  width: 100%; /* Fixes width issue */
+  box-sizing: border-box; /* Ensures padding is included in width */
 }
 
 nav .logo {
