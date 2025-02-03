@@ -316,6 +316,13 @@ box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   .project-card {
     flex: 1 1 100%; /* Each project takes full width */
   }
+  .skills-container {
+    flex-direction: column; /* Stacks the two skill containers vertically */
+  }
+  .technical-skills, .proficiency-container {
+    flex: 1 1 100%; /* Makes each section take full width */
+    margin-bottom: 20px; /* Adds space between the two sections */
+  }
 }
 
 
