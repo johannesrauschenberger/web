@@ -22,7 +22,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vw; /* Ensures navbar spans the full width */
 }
+
 nav .logo {
   font-size: 1.5em;
   font-weight: bold;
