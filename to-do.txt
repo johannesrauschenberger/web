@@ -1,2 +1,2 @@
-Hamburger menu instead of navbar (mobile)
+Hamburger menu animation (mobile)
 Fix navbar when scrolling down (dektop)
