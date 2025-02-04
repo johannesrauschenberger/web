@@ -47,7 +47,7 @@
   <div class="projects-container">
     
     <!-- Property24 Scraper Project -->
-    <div class="project-card">
+    <div class="project-card scroll-item">
       <img src="https://johannesrauschenberger.github.io/web/img/P24_Dashboard.jpg" alt="Property24 Dashboard">
       <h3>Python Webscraper</h3>
       <p>I wrote a Python script to scrape property24.com and analyse Pretoria's residential property market. 
@@ -58,7 +58,7 @@
       </a>
     </div>
 
-    <div class="project-card">
+    <div class="project-card scroll-item">
       <img src="https://johannesrauschenberger.github.io/web/img/SBA.png" alt="Scenario Bundle Analysis">
       <h3>AI in Game Theory</h3>
       <p>A paper I coauthored about strengths and weaknesses of AI in Game Theory, 
@@ -69,7 +69,7 @@
     </div>
 
     <!-- Placeholder for Future Projects -->
-    <div class="project-card placeholder">
+    <div class="project-card placeholder scroll-item">
       <p>Coming soon...</p>
     </div>
   </div>
@@ -115,6 +115,26 @@ document.addEventListener("DOMContentLoaded", function () {
     burger.classList.toggle("active"); // Animate burger icon
   });
 });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".scroll-item"); // Select all scrollable items
+  
+      const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry, index) => {
+              if (entry.isIntersecting) {
+                  setTimeout(() => {
+                      entry.target.classList.add("visible"); // Add animation
+                  }, index * 200); // Staggered delay for smoother effect
+                  
+                  observer.unobserve(entry.target); // Stop observing after animation
+              }
+          });
+      }, { threshold: 0.2 }); // Trigger when 20% of an element is visible
+  
+      items.forEach(item => observer.observe(item)); // Attach observer to each item
+  });
 </script>
 
 </body>
