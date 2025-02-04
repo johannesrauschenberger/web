@@ -17,12 +17,13 @@
       <a href="index.html"><img src="https://johannesrauschenberger.github.io/web/img/logo.png" alt="Logo"></a>
     </div>    
 
-    <!-- Hamburger Icon -->
-    <div class="burger-menu" id="burgerMenu">
-      <div class="burger-bar"></div>
-      <div class="burger-bar"></div>
-      <div class="burger-bar"></div>
-    </div>
+<!-- Burger Menu -->
+<div class="burger-menu" id="burgerMenu">
+  <span class="burger-bar"></span>
+  <span class="burger-bar"></span>
+  <span class="burger-bar"></span>
+</div>
+
 
     <!-- Navigation Links -->
     <div class="nav-links-container">
@@ -226,17 +227,18 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <!-- Burger Menu Script for mobile -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const burger = document.getElementById("burgerMenu");
-      const navLinksContainer = document.querySelector(".nav-links-container");
+<!-- Burger Menu Script for mobile -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burgerMenu");
+  const navLinks = document.querySelector(".nav-links-container");
 
-      burger.addEventListener("click", function () {
-        navLinksContainer.classList.toggle("active");
-      });
-    });
-  </script>
+  burger.addEventListener("click", function () {
+    navLinks.classList.toggle("active"); // Toggle menu visibility
+    burger.classList.toggle("active"); // Animate burger icon
+  });
+});
+</script>
 
 </body>
 </html>
