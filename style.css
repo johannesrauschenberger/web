@@ -497,3 +497,41 @@ width: 100%;
 max-width: 100%;
 box-sizing: border-box;
 }
+
+
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left side (Tech Skills) and Right side (Languages) take exactly 50% */
+.technical-skills, .proficiency-container {
+  flex: 1 1 50%;
+  padding: 20px;
+  min-width: 300px; /* Prevents sections from getting too small */
+}
+
+/* On smaller screens, stack them */
+@media (max-width: 768px) {
+.technical-skills, .proficiency-container {
+  flex: 1 1 100%;
+}
+}
+
+/* Scroll Reveal Effect */
+.scroll-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When in view, make items appear */
+.scroll-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
