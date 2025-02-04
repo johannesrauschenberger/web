@@ -100,26 +100,61 @@ nav .logo img {
   color: #004c4c; /* Change text to teal on hover */
 }
 
-/* 🔹 Burger Menu (Hidden on Desktop) */
+/* 🔹 Burger Menu Base Styles */
 .burger-menu {
-  display: none;
+  display: none; /* Hidden on desktop */
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  position: relative;
 }
 
+/* 🔹 Burger Bars */
 .burger-bar {
-  width: 30px;
+  width: 35px;
   height: 4px;
   background-color: white;
   margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
 }
 
-/* 🟢 Desktop: Ensure Inline Navbar */
-@media (min-width: 769px) {
-  .nav-links-container {
-    display: flex !important;
-    align-items: center;
+/* 🔹 Position bars initially */
+.burger-bar:nth-child(1) {
+  top: 8px;
+}
+
+.burger-bar:nth-child(2) {
+  top: 18px;
+}
+
+.burger-bar:nth-child(3) {
+  top: 28px;
+}
+
+/* 🔹 When menu is active (animated effect) */
+.burger-menu.active .burger-bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burger-menu.active .burger-bar:nth-child(2) {
+  opacity: 0; /* Hide middle bar */
+}
+
+.burger-menu.active .burger-bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* 🔹 Show Burger Menu on Mobile */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
   }
+}
+
 
   .nav-links {
     display: flex;  /* Ensure horizontal layout */
@@ -129,7 +164,6 @@ nav .logo img {
   .burger-menu {
     display: none;  /* Hide burger on desktop */
   }
-}
 
 /* 🔴 Mobile: Hide Links Initially, Show Only When Toggled */
 @media (max-width: 768px) {
