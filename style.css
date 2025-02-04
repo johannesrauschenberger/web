@@ -20,33 +20,23 @@ body, html {
   overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-/* 🔹 General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* 🔹 Navbar */
 nav {
-  background-color: #004c4c;
+  background-color: #004c4c; /* Keep your current color */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
-  position: relative;
+  padding: 10px 20px;
+  height: 60px; /* Keeps navbar height consistent */
+  width: 100%;
+  
+  /* 🔹 Makes the navbar fixed at the top */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures it stays above other elements */
 }
+
 
 nav .logo img {
   height: 50px;
@@ -209,6 +199,7 @@ nav .logo img {
   text-align: center;
   width: 100%;
   padding: 50px 20px;
+  margin-top: 60px; /* 🔹 Pushes the hero section below the navbar */
 }
 .hero h1 {
   font-size: 2.5em;
