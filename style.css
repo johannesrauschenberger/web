@@ -6,10 +6,22 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
 }
+
+/* Titles & Headings */
+h1, h2, h3 {
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 700; /* Makes headers stand out */
+  color: #004c4c; /* Keeps it in your theme */
+}
+
+/* Body Text (Main Content) */
+body {
+  font-family: Arial, sans-serif;
+}
+
 
 a {
   text-decoration: none;
@@ -472,6 +484,12 @@ text-decoration: none;
 border-radius: 5px;
 font-weight: bold;
 }
+
+/* Keep "My Projects" header white */
+.content h1 {
+  color: white !important; /* Force it to stay white */
+}
+
 
 .project-button:hover {
 background: #444;
