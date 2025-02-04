@@ -43,133 +43,137 @@
     <p>Welcome to my personal website! I'm excited to share my journey with you.</p>
   </section>
 
-  <!-- About Section -->
+
   <section class="about" id="about">
-    <h2>About Me</h2>
-    <div class="profile-pic-container">
+    <h2 class="scroll-item">About Me</h2>
+    <div class="profile-pic-container scroll-item">
       <img src="https://johannesrauschenberger.github.io/web/img/profile2.jpg" alt="Johannes Rauschenberger" class="profile-pic">
     </div>
-    <p>
+    <p class="scroll-item">
       I am a business student with experience in financial analysis and a strong interest in strategy, technology, 
       real estate investment, and entrepreneurship in Europe and southern Africa. 
       Currently, I am finishing my degree in International Business and Management at Rhine-Waal University of Applied Sciences.
     </p>
   </section>
+  
 
-  <!-- Skills Section -->
-  <section class="skills-container">
-    
-    <!-- Technical Skills -->
-    <div class="technical-skills" id="skills">
-      <h2>Technical Skills</h2>
-      <div class="skills-category">
-        <h3><i class="fa-solid fa-laptop-code"></i> Software</h3>
-        <ul>
-          <li>Microsoft Excel, PowerPoint & Access</li>
-          <li>Tableau</li>
-          <li>Alteryx, Tableau Prep</li>
-          <li>Power BI</li>
-        </ul>
-      </div>
-      <div class="spacer"></div> <!-- This is the spacer -->
-      <div class="skills-category">
-        <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
-        <ul>
-          <li>Python</li>
-          <li>HTML/CSS</li>
-          <li>VBA</li>
-          <li>R</li>
-        </ul>
-      </div>
-      <div class="spacer"></div> <!-- This is the spacer -->
-      <div class="skills-category">
-        <h3><i class="fa-solid fa-database"></i> Database Management</h3>
-        <ul>
-          <li>SQL Queries</li>
-          <li>Database Design & Normalisation</li>
-        </ul>
-      </div>
-      <div class="spacer"></div> <!-- This is the spacer -->
-      <div class="skills-category">
-        <h3><i class="fa-solid fa-lightbulb"></i> Other Skills</h3>
-        <ul>
-          <li>Automation</li>
-          <li>Generative AI</li>
-        </ul>
+<!-- Skills Section -->
+<section class="skills-container">
+  
+  <!-- Technical Skills -->
+  <div class="technical-skills scroll-reveal" id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-category scroll-item">
+      <h3><i class="fa-solid fa-laptop-code"></i> Software</h3>
+      <ul>
+        <li class="scroll-item">Microsoft Excel, PowerPoint & Access</li>
+        <li class="scroll-item">Tableau</li>
+        <li class="scroll-item">Alteryx, Tableau Prep</li>
+        <li class="scroll-item">Power BI</li>
+      </ul>
+      <div class="spacer"></div>
+    </div>
+    <div class="skills-category scroll-item">
+      <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
+      <ul>
+        <li class="scroll-item">Python</li>
+        <li class="scroll-item">HTML/CSS</li>
+        <li class="scroll-item">VBA</li>
+        <li class="scroll-item">R</li>
+      </ul>
+      <div class="spacer"></div>
+    </div>
+    <div class="skills-category scroll-item">
+      <h3><i class="fa-solid fa-database"></i> Database Management</h3>
+      <ul>
+        <li class="scroll-item">SQL Queries</li>
+        <li class="scroll-item">Database Design & Normalisation</li>
+      </ul>
+      <div class="spacer"></div>
+    </div>
+    <div class="skills-category scroll-item">
+      <h3><i class="fa-solid fa-lightbulb"></i> Other Skills</h3>
+      <ul>
+        <li class="scroll-item">Automation</li>
+        <li class="scroll-item">Generative AI</li>
+      </ul>
+      <div class="spacer"></div>
+    </div>
+  </div>
+  
+  <!-- Language Proficiency (Unchanged) -->
+  <div class="proficiency-container" id="languages">
+    <h2>Language Proficiency</h2>
+    <div class="language">
+      <p>German (C2)</p>
+      <div class="bar-frame">
+        <div class="bar advanced" data-percentage="100"></div>
       </div>
     </div>
-    
-    <!-- Language Proficiency -->
-    <div class="proficiency-container" id="languages">
-      <h2>Language Proficiency</h2>
-      <div class="language">
-        <p>German (C2)</p>
-        <div class="bar-frame">
-          <div class="bar advanced" data-percentage="100"></div>
-        </div>
-      </div>
-      <div class="language">
-        <p>English (C2)</p>
-        <div class="bar-frame">
-          <div class="bar advanced" data-percentage="100"></div>
-        </div>
-      </div>
-      <div class="language">
-        <p>Afrikaans (C2)</p>
-        <div class="bar-frame">
-          <div class="bar advanced" data-percentage="100"></div>
-        </div>
-      </div>
-      <div class="language">
-        <p>Dutch (B2)</p>
-        <div class="bar-frame">
-          <div class="bar intermediate" data-percentage="67"></div>
-        </div>
-      </div>
-      <div class="language">
-        <p>Spanish (B2)</p>
-        <div class="bar-frame">
-          <div class="bar intermediate" data-percentage="67"></div>
-        </div>
-      </div>
-      <div class="language">
-        <p>Portuguese (B2)</p>
-        <div class="bar-frame">
-          <div class="bar intermediate" data-percentage="67"></div>
-        </div>
-      </div>
-      <div class="language">
-        <p>French (B1)</p>
-        <div class="bar-frame">
-          <div class="bar intermediate" data-percentage="50"></div>
-        </div>
-      </div>
-      <div class="language">
-        <p>Italian (B1)</p>
-        <div class="bar-frame">
-          <div class="bar intermediate" data-percentage="50"></div>
-        </div>
-      </div>
-      <div class="language">
-        <p>Russian (A2)</p>
-        <div class="bar-frame">
-          <div class="bar beginner" data-percentage="34"></div>
-        </div>
-      </div>
-      <div class="language">
-        <p>Setswana (A2)</p>
-        <div class="bar-frame">
-          <div class="bar beginner" data-percentage="34"></div>
-        </div>
-      </div>
-      <div class="language">
-        <p>isiZulu (A1)</p>
-        <div class="bar-frame">
-          <div class="bar beginner" data-percentage="17"></div>
-        </div>
+    <div class="language">
+      <p>English (C2)</p>
+      <div class="bar-frame">
+        <div class="bar advanced" data-percentage="100"></div>
       </div>
     </div>
-  </section>
+    <div class="language">
+      <p>Afrikaans (C2)</p>
+      <div class="bar-frame">
+        <div class="bar advanced" data-percentage="100"></div>
+      </div>
+    </div>
+    <div class="language">
+      <p>Dutch (B2)</p>
+      <div class="bar-frame">
+        <div class="bar intermediate" data-percentage="67"></div>
+      </div>
+    </div>
+    <div class="language">
+      <p>Spanish (B2)</p>
+      <div class="bar-frame">
+        <div class="bar intermediate" data-percentage="67"></div>
+      </div>
+    </div>
+    <div class="language">
+      <p>Portuguese (B2)</p>
+      <div class="bar-frame">
+        <div class="bar intermediate" data-percentage="67"></div>
+      </div>
+    </div>
+    <div class="language">
+      <p>French (B1)</p>
+      <div class="bar-frame">
+        <div class="bar intermediate" data-percentage="50"></div>
+      </div>
+    </div>
+    <div class="language">
+      <p>Italian (B1)</p>
+      <div class="bar-frame">
+        <div class="bar intermediate" data-percentage="50"></div>
+      </div>
+    </div>
+    <div class="language">
+      <p>Russian (A2)</p>
+      <div class="bar-frame">
+        <div class="bar beginner" data-percentage="34"></div>
+      </div>
+    </div>
+    <div class="language">
+      <p>Setswana (A2)</p>
+      <div class="bar-frame">
+        <div class="bar beginner" data-percentage="34"></div>
+      </div>
+    </div>
+    <div class="language">
+      <p>isiZulu (A1)</p>
+      <div class="bar-frame">
+        <div class="bar beginner" data-percentage="17"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 
   <!-- Contact Section -->
   <section class="contact" id="contact">
@@ -237,6 +241,26 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.classList.toggle("active"); // Toggle menu visibility
     burger.classList.toggle("active"); // Animate burger icon
   });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".scroll-item"); // Select all scrollable items
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("visible"); // Add animation
+                }, index * 200); // Staggered delay for smoother effect
+                
+                observer.unobserve(entry.target); // Stop observing after animation
+            }
+        });
+    }, { threshold: 0.2 }); // Trigger when 20% of an element is visible
+
+    items.forEach(item => observer.observe(item)); // Attach observer to each item
 });
 </script>
 
