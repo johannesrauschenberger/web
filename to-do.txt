@@ -1,2 +1,1 @@
-Hamburger menu animation (mobile)
-Fix navbar when scrolling down (dektop)
+implement multiple languages
