@@ -49,10 +49,12 @@ nav {
   z-index: 1000; /* Ensures it stays above other elements */
 }
 
-
+/* 🔹 Logo Image Styles */
 nav .logo img {
   height: 50px;
   margin-top: 6px;
+  z-index: 1002; /* Ensures the logo stays on top */
+  position: relative; /* Make sure it's positioned above other elements */
 }
 
 /* 🔹 Navigation Links (Desktop) */
@@ -114,6 +116,7 @@ nav .logo img {
   height: 40px;
   cursor: pointer;
   position: relative;
+  z-index: 1001; /* Ensure burger menu is below logo */
 }
 
 /* 🔹 Burger Bars */
@@ -159,28 +162,24 @@ nav .logo img {
   }
 }
 
+.nav-links {
+  display: flex;  /* Ensure horizontal layout */
+  flex-direction: row;  /* Keep links inline */
+}
 
-  .nav-links {
-    display: flex;  /* Ensure horizontal layout */
-    flex-direction: row;  /* Keep links inline */
-  }
-
-  .burger-menu {
-    display: none;  /* Hide burger on desktop */
-  }
-
-/* 🔴 Mobile: Hide Links Initially, Show Only When Toggled */
 @media (max-width: 768px) {
   .nav-links-container {
-    display: none; /* Hide initially */
-    position: absolute;
-    top: 60px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Make it overlay the entire screen */
+    top: 0;
     left: 0;
-    width: 100%;
-    background-color: #004c4c;
-    padding: 10px 0;
-    text-align: center;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: rgba(0, 76, 76, 0.95); /* Optional: Slight transparency */
+    align-items: center;
+    justify-content: center;
     flex-direction: column; /* Stack links vertically */
+    z-index: 999; /* Keep this below the logo and burger menu */
   }
 
   .nav-links-container.active {
@@ -189,22 +188,30 @@ nav .logo img {
   }
 
   .nav-links {
-    flex-direction: column; /* Stack links in mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100%; /* Ensure it fills the full height */
   }
 
   .nav-links li {
-    margin: 10px 0;
-  }
-
-  .linkedin-button {
-    margin-top: 10px;
+    margin: 20px 0; /* Increase spacing between items */
+    font-size: 24px; /* Increase font size */
   }
 
   .burger-menu {
-    display: flex; /* Show burger on mobile */
+    position: fixed;
+    right: 20px;
+    z-index: 1001; /* Make sure it's above the nav menu but below the logo */
+  }
+  
+  .linkedin-button {
+    position: relative;
+    top: -140px; /* Adjust this value until it's aligned */
+    align-items: center;
   }
 }
-
 
 
 /* Hero Section */
@@ -376,23 +383,42 @@ height: 30px; /* Adjust as needed */
 .contact form button:hover {
   background-color: #003737; /* Even darker teal */
 }
+
+/* 🔹 Back to Top Button */
 #backToTop {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background-color: #004c4c;
-color: white;
-border: none;
-padding: 10px 15px;
-border-radius: 5px;
-cursor: pointer;
-font-size: 14px;
-display: none; /* Initially hidden */
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #004c4c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0; /* 🔹 Hidden by default */
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+/* 🔹 Fully visible when scrolling down */
+#backToTop.visible {
+  opacity: 1;
+  transform: translateY(0); /* Normal position */
+}
+
+/* 🔹 When not in use, fade it slightly */
+#backToTop.hidden {
+  opacity: 0.3; /* 🔹 Slightly visible when idle */
+  transform: translateY(10px); /* Moves down slightly */
+}
+
+/* 🔹 Hover effect (full opacity when hovered) */
 #backToTop:hover {
-background-color: #003737;
+  opacity: 1;
+  background-color: #003737;
 }
+
 
 /* Parallax Background */
 .parallax {
