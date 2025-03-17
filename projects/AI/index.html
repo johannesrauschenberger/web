@@ -55,6 +55,22 @@
     <p><a href="https://rauschenberger.co.za/projects/AI/AI in Game Theory.pdf" target="_blank">Click here</a> to open the PDF in a new tab.</p>
   </div>
 
+  <script>
+    function adjustPDFZoom() {
+      let iframe = document.getElementById("pdfFrame");
+      let screenWidth = window.innerWidth;
+  
+      if (screenWidth < 768) {
+        iframe.src = "https://rauschenberger.co.za/projects/AI/AI%20in%20Game%20Theory.pdf#zoom=60";
+      } else {
+        iframe.src = "https://rauschenberger.co.za/projects/AI/AI%20in%20Game%20Theory.pdf";
+      }
+    }
+    
+    window.addEventListener("load", adjustPDFZoom);
+    window.addEventListener("resize", adjustPDFZoom);
+  </script>
+  
   <!-- Footer -->
   <footer>
     <p>© 2025 Johannes Rauschenberger. All rights reserved.</p>
