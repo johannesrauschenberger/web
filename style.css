@@ -284,10 +284,14 @@ height: 30px; /* Adjust as needed */
 .skills-container {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1200px; /* 🔹 Increase width from 1200px */
+  width: 90%; /* 🔹 Ensures it scales well on all screen sizes */
   margin: 50px auto;
   padding: 20px;
+  flex-wrap: wrap;
 }
+
+
 .technical-skills, .proficiency-container {
   flex: 1;
   padding: 20px;
