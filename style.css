@@ -565,12 +565,16 @@ box-sizing: border-box;
 
 .pdf-container {
   display: flex;
-  max-width: 1200px; /* Matches the max-width of skills-container */
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Ensure vertical centering if needed */
+  max-width: 1200px; 
+  margin: 0 auto; /* 🔹 Ensures centering */
   padding: 40px 20px;
   background: white;
+  text-align: center; /* 🔹 Centers inline elements like text */
 }
+
 
 .pdf-container iframe {
   border: none;
