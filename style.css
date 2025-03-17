@@ -544,6 +544,44 @@ box-sizing: border-box;
 }
 
 
+.teal-banner {
+  background-color: #e6f7f7; /* Light teal background */
+  text-align: center;
+  padding: 40px 20px;
+  margin: 40px auto;
+}
+
+.teal-banner h1 {
+  font-size: 2em;
+  color: #004d40; /* Darker teal for contrast */
+}
+
+.teal-banner p {
+  font-size: 1.2em;
+  color: #333;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: white;
+}
+
+.pdf-container iframe {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-container p {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+
 
 .skills-container {
   display: flex;
