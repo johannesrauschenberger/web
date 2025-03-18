@@ -59,31 +59,28 @@ nav .logo img {
   position: relative; /* Make sure it's positioned above other elements */
 }
 
-/* 🔹 Navigation Links (Desktop) */
 .nav-links-container {
   display: flex;
-  align-items: center;
+  align-items: center; /* Ensures vertical centering */
+  justify-content: center; /* Centers nav items horizontally */
+  height: 100%; /* Ensures full height for centering */
 }
 
-/* Ensure the `ul` inside the container is flex */
 .nav-links {
-  display: flex;  /* Make the links inline */
-  list-style: none;  /* Remove bullets */
-  padding: 0;
-  margin: 0;
+  display: flex;
+  align-items: center; /* Keeps buttons vertically aligned */
+  gap: 20px; /* Adjust spacing between buttons */
 }
 
 .nav-links li {
-  margin: 0 15px;
+  display: flex;
+  align-items: center; /* Ensures text and LinkedIn button align */
 }
+
 
 .nav-links li a {
   color: white;
   font-weight: bold;
-}
-
-.nav-links li a:hover {
-  text-decoration: underline;
 }
 
 /* LinkedIn Button Styles */
