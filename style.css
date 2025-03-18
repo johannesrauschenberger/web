@@ -198,9 +198,9 @@ nav .logo img {
   }
 
   .nav-links li {
-    margin: 20px 0; /* Increase spacing between items */
-    font-size: 24px; /* Increase font size */
-  }
+    margin: 10px 0; /* 🔹 Reduce spacing between items */
+    font-size: 22px; /* 🔹 Slightly smaller text to improve fit */
+  } 
 
   .burger-menu {
     position: fixed;
@@ -209,10 +209,8 @@ nav .logo img {
   }
   
   .linkedin-button {
-    position: relative;
-    top: -140px; /* Adjust this value until it's aligned */
-    align-items: center;
-  }
+    margin-top: 10px; /* 🔹 Add some space so it doesn't overlap */
+  }  
 }
 
 
