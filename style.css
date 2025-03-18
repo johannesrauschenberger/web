@@ -350,6 +350,43 @@ height: 30px; /* Adjust as needed */
 .bar.beginner { background-color: #b3e0e0; }
 
 
+/* 🔹 Projects CTA Section */
+.projects-cta {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.projects-button {
+  display: inline-block;
+  background-color: #000000; /* Black */
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.projects-button:hover {
+  background-color: #000000; /* black */
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+/* 🔹 Ensure proper spacing on mobile */
+@media (max-width: 600px) {
+  .projects-cta {
+    margin: 30px auto;
+  }
+
+  .projects-button {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+}
+
+
+
 /* Contact Section */
 .contact {
   padding: 50px 20px;
