@@ -71,10 +71,34 @@
     window.addEventListener("resize", adjustPDFZoom);
   </script>
   
+
   <!-- Footer -->
   <footer>
     <p>© 2025 Johannes Rauschenberger. All rights reserved.</p>
   </footer>
+
+<!-- Burger Menu Script for mobile -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.getElementById("burgerMenu");
+    const navLinks = document.querySelector(".nav-links-container");
+    const navItems = document.querySelectorAll(".nav-links li a"); // Get all the nav link elements
+  
+    // Toggle the menu when the burger icon is clicked
+    burger.addEventListener("click", function () {
+      navLinks.classList.toggle("active"); // Toggle menu visibility
+      burger.classList.toggle("active"); // Animate burger icon
+    });
+  
+    // Close the menu when any nav link is clicked
+    navItems.forEach(item => {
+      item.addEventListener("click", function () {
+        navLinks.classList.remove("active"); // Close the menu
+        burger.classList.remove("active"); // Optionally reset the burger icon
+      });
+    });
+  });
+</script>
 
   <!-- Scroll to Top Button -->
   <button onclick="scrollToTop()" id="backToTop">Back to Top ↑</button>
