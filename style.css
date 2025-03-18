@@ -279,47 +279,59 @@ nav .logo img {
 height: 30px; /* Adjust as needed */
 }
 
-
-/* Skills Section - Two Columns */
+/* 🔹 Skills Section - Two Columns */
 .skills-container {
   display: flex;
+  flex-wrap: wrap; /* Ensures wrapping when necessary */
   justify-content: space-between;
-  max-width: 1200px; /* 🔹 Increase width from 1200px */
-  width: 90%; /* 🔹 Ensures it scales well on all screen sizes */
+  max-width: 1200px;
+  width: 90%;
   margin: 50px auto;
   padding: 20px;
-  flex-wrap: wrap;
+  gap: 20px; /* Prevents elements from touching */
 }
 
-
+/* 🔹 Each section starts side by side */
 .technical-skills, .proficiency-container {
-  flex: 1;
+  flex: 1 1 48%; /* Ensures both sections take equal width */
+  min-width: 300px; /* Prevents excessive shrinking */
   padding: 20px;
 }
-.technical-skills {
-  text-align: left;
+
+/* 🔹 Stack sections on small screens */
+@media (max-width: 600px) {
+  .technical-skills, .proficiency-container {
+    flex: 1 1 100%; /* Each section takes full width */
+  }
 }
+
+
+/* 🔹 Headings and Category Styling */
 .technical-skills h2, .proficiency-container h2 {
   text-align: center;
   font-size: 2em;
   margin-bottom: 20px;
   color: #004c4c;
 }
+
 .skills-category h3 {
   font-size: 1.5em;
   color: #004c4c;
   margin-bottom: 10px;
 }
+
 .skills-category ul {
   list-style-type: none;
   padding-left: 0;
 }
+
 .skills-category ul li {
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 5px;
   color: #555;
 }
+
 
 /* Language Proficiency Bars */
 .language {
@@ -481,13 +493,6 @@ box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   .project-card {
     flex: 1 1 100%; /* Each project takes full width */
   }
-  .skills-container {
-    flex-direction: column; /* Stacks the two skill containers vertically */
-  }
-  .technical-skills, .proficiency-container {
-    flex: 1 1 100%; /* Makes each section take full width */
-    margin-bottom: 20px; /* Adds space between the two sections */
-  }
 }
 
 
@@ -614,30 +619,6 @@ html, body {
   font-size: 1em;
 }
 
-
-
-.skills-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 20px;
-  flex-wrap: wrap;
-}
-
-/* Left side (Tech Skills) and Right side (Languages) take exactly 50% */
-.technical-skills, .proficiency-container {
-  flex: 1 1 50%;
-  padding: 20px;
-  min-width: 300px; /* Prevents sections from getting too small */
-}
-
-/* On smaller screens, stack them */
-@media (max-width: 768px) {
-.technical-skills, .proficiency-container {
-  flex: 1 1 100%;
-}
-}
 
 /* Scroll Reveal Effect */
 .scroll-item {
