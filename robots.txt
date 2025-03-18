@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://rauschenberger.co.za/sitemap.xml
