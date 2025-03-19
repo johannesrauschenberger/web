@@ -353,7 +353,7 @@ height: 30px; /* Adjust as needed */
 /* 🔹 Projects CTA Section */
 .projects-cta {
   text-align: center;
-  margin: 50px auto;
+  margin: 0px auto 50px; /* Less top margin, keeps bottom spacing */
 }
 
 .projects-button {
