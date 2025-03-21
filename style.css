@@ -284,6 +284,7 @@ height: 30px; /* Adjust as needed */
   margin: 50px auto;
   padding: 20px;
   gap: 20px; /* Prevents elements from touching */
+  margin-bottom: 20px;
 }
 
 /* 🔹 Each section starts side by side */
@@ -353,7 +354,7 @@ height: 30px; /* Adjust as needed */
 /* 🔹 Projects CTA Section */
 .projects-cta {
   text-align: center;
-  margin: 0px auto 50px; /* Less top margin, keeps bottom spacing */
+  margin: 0px auto 80px; /* Less top margin, keeps bottom spacing */
 }
 
 .projects-button {
@@ -663,4 +664,294 @@ html, body {
 .scroll-item.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+/* 🔹 Blog Overview Container */
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* 🔹 Blog Overview Cards */
+.blog-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 30%;
+  min-width: 280px;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+  transform: scale(1.03);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* 🔹 Blog Overview Card Content */
+.blog-content {
+  padding: 15px;
+}
+
+.blog-content h3 {
+  font-size: 1.4em;
+  color: #004c4c;
+  margin-bottom: 10px;
+}
+
+.blog-date {
+  font-size: 0.9em;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Responsive Blog Overview */
+@media (max-width: 900px) {
+  .blog-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-card {
+    width: 100%;
+  }
+}
+
+/* 🔹 Blog Image - Force 16:9 Aspect Ratio */
+.blog-image-container {
+  text-align: center;
+  margin: 80px auto;
+  width: 100%; /* Ensures it stretches full width */
+}
+
+.blog-image-container img {
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9; /* Automatically maintains 16:9 ratio */
+  object-fit: cover; /* Crops the image to fit */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* 🔹 Image Credit */
+.image-credit {
+  font-size: 0.8em;
+  color: #666;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.image-credit a {
+  color: #004c4c;
+  text-decoration: none;
+}
+
+.image-credit a:hover {
+  text-decoration: underline;
+}
+
+
+/* 🔹 Author & Date Section */
+.blog-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This keeps the elements spaced out properly */
+  width: 80%;
+  max-width: 800px; /* Optionally limit the max width */
+  margin: 0 auto;
+  padding-left: 20px; /* Adds space on the left */
+  padding-right: 20px; /* Adds space on the right */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Ensures the date stays right aligned */
+.blog-meta .date {
+  margin-left: auto; /* Pushes the date to the far right */
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  .blog-meta {
+    padding-left: 20px; /* Adds space on the left */
+    padding-right: 20px; /* Adds space on the right */
+  }
+}
+
+
+/* 🔹 Author Info */
+.author-info {
+  display: flex;
+  align-items: center;
+}
+
+.author-pic {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #004c4c;
+  margin-right: 10px; /* Adds margin between the image and the name */
+}
+
+.author-name {
+  font-size: 1em;
+  font-weight: bold;
+  color: #004c4c;
+}
+
+/* 🔹 Post Date */
+.post-date {
+  font-size: 1em;
+  color: #666;
+  font-style: italic;
+  text-align: right; /* Ensures the text is right-aligned */
+}
+
+
+
+/* 🔹 Horizontal Divider */
+.blog-divider {
+  width: 60%; /* Slightly narrower */
+  height: 1px;
+  background: rgba(150, 150, 150, 0.3); /* Softer divider */
+  margin: 15px auto;
+}
+
+
+
+
+/* 🔹 Blog Post Title Section */
+.blog-title-section {
+  text-align: center;
+  margin: 30px auto 20px;
+}
+
+.blog-title-section h1 {
+  font-size: 2.5em;
+  color: #004c4c;
+}
+
+
+
+/* 🔹 Blog Post Content */
+.blog-post-content {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  line-height: 1.8;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* 🔹 Back to Blog Button */
+.blog-back {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #004c4c;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.back-button:hover {
+  background-color: #003737;
+  transform: scale(1.05);
+}
+
+.blog-post-content p:first-of-type::first-letter {
+  font-family: 'Times New Roman', serif;
+  font-size: 3em; /* Make it large */
+  font-weight: bold;
+  float: left;
+  margin-right: 10px;
+  line-height: 1;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  flex-direction: column; /* Stacks image and caption */
+  align-items: center; /* Centers vertically if needed */
+  margin: 20px 0; /* Adds spacing around the image */
+}
+
+.image-container img {
+  max-width: 100%; /* Prevents it from being too large */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: Slightly rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Light shadow for aesthetics */
+}
+
+
+.image-container figcaption {
+  margin-top: 8px; /* Space between image & caption */
+  font-size: 0.8em; /* Slightly smaller text */
+  color: #555; /* Subtle gray color */
+  text-align: left; /* Centers caption */
+  font-style: italic; /* Optional: Makes it stand out */
+}
+
+.image-container figcaption a {
+  color: #0077cc; /* Makes it stand out */
+  text-decoration: none; /* Removes default underline */
+  font-weight: bold; /* Optional: Makes it bolder */
+}
+
+.image-container figcaption a:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center; /* Centers buttons horizontally */
+  gap: 15px; /* Adds space between buttons */
+  margin-top: 30px; /* Adds space above the buttons */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+  text-align: center;
+}
+
+.github-button {
+  background-color: #24292e; /* GitHub dark gray */
+  color: #ffffff;
+}
+
+.github-button:hover {
+  background-color: #333d47;
+}
+
+.projects-button {
+  background-color: #008080; /* Teal (to match your theme) */
+  color: #ffffff;
+}
+
+.projects-button:hover {
+  background-color: #006666;
 }
