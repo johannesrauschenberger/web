@@ -7,7 +7,7 @@
     <meta name="description" content="Explore my AI, data analysis, and finance projects. Includes Python applications and strategic research.">
     <link rel="icon" href="https://rauschenberger.co.za/img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://johannesrauschenberger.github.io/web/style.css">
 
     <!-- Prism.js for syntax highlighting -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
@@ -59,7 +59,7 @@
     <!-- Author & Date Section -->
     <div class="blog-meta">
         <div class="author-info">
-            <img src="../../img/pofile2.jpg" alt="Johannes Rauschenberger" class="author-pic">
+            <img src="https://johannesrauschenberger.github.io/web/img/pofile2.jpg" alt="Johannes Rauschenberger" class="author-pic">
             <p class="author-name">Johannes Rauschenberger</p>
         </div>
         <p class="post-date">March 21, 2025</p>
@@ -81,7 +81,7 @@
 <!-- Image with Caption -->
 <div class="image-container">
     <figure>
-        <img src="/img/property24.png" 
+        <img src="https://johannesrauschenberger.github.io/web/projects/webscraper/img/property24.png" 
              alt="Property24 Screenshot">
         <figcaption><a href="https://www.property24.com/" target="_blank">Property24</a> landing page</figcaption>
     </figure>
@@ -135,28 +135,5 @@
     <footer>
     <p>© 2025 Johannes Rauschenberger. All rights reserved.</p>
     </footer>
-
-
-<!-- Appear as you scroll --> 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const items = document.querySelectorAll(".scroll-item"); // Select all scrollable items
-    
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add("visible"); // Add animation
-                    }, index * 200); // Staggered delay for smoother effect
-                    
-                    observer.unobserve(entry.target); // Stop observing after animation
-                }
-            });
-        }, { threshold: 0.2 }); // Trigger when 20% of an element is visible
-    
-        items.forEach(item => observer.observe(item)); // Attach observer to each item
-    });
-</script>
-
 </body>
 </html>
