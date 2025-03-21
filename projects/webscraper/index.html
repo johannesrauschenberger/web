@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property24 Web Scraper</title>
+    <meta name="description" content="Explore my AI, data analysis, and finance projects. Includes Python applications and strategic research.">
+    <link rel="icon" href="https://rauschenberger.co.za/img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\johan\OneDrive\Dokumente\HTML\personal website\style.css">
+
+    <!-- Prism.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6F7TL9W0EN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-6F7TL9W0EN');
+    </script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="/"><img src="https://johannesrauschenberger.github.io/web/img/logo.png" alt="Logo"></a>
+        </div>
+
+        <!-- Burger Menu -->
+        <div class="burger-menu" id="burgerMenu">
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/johannesrauschenberger/" target="_blank" class="linkedin-button">in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Teal Banner Section -->
+    <div class="teal-banner">
+        <h1>Property24 Web Scraper in Python</h1>
+    </div>
+
+    <!-- Author & Date Section -->
+    <div class="blog-meta">
+        <div class="author-info">
+            <img src="C:\Users\johan\OneDrive\Dokumente\HTML\personal website\img\profile2.jpg" alt="Johannes Rauschenberger" class="author-pic">
+            <p class="author-name">Johannes Rauschenberger</p>
+        </div>
+        <p class="post-date">March 21, 2025</p>
+    </div>
+
+    <!-- Horizontal Divider -->
+    <hr class="blog-divider">
+
+    <!-- Blog Content -->
+    <main class="blog-post-content">
+        <p>
+            Property24 is South Africa's most widely used web portal for property, both among prospective buyers and renters. 
+            At any given time, the site contains more than 300,000 listings ranging from residential, over commercial and industrial 
+            all the way to agricultural property. As such it harbours a considerable wealth of data. 
+            This data can be extracted for analysis through a process known as <strong>web scraping</strong>. 
+            A web scraper is a script that scans the HTML structure of a website and looks for certain keywords, recording its results.
+        </p>
+
+<!-- Image with Caption -->
+<div class="image-container">
+    <figure>
+        <img src="C:\Users\johan\OneDrive\Dokumente\HTML\personal website\projects\webscraper\img\property24.png" 
+             alt="Property24 Screenshot">
+        <figcaption><a href="https://www.property24.com/" target="_blank">Property24</a> landing page</figcaption>
+    </figure>
+</div>
+
+        <p>
+            Phasellus venenatis neque a quam tincidunt, et pharetra ipsum feugiat. Nulla facilisi. 
+            Donec non volutpat libero. Vivamus non ante eu nulla scelerisque egestas. 
+            Etiam maximus, lacus in malesuada suscipit, mi metus vulputate quam, eget euismod mauris erat a nisi. 
+        </p>
+        <p>
+            Vestibulum id velit eu augue elementum aliquet. Nam rhoncus sapien in odio sagittis laoreet. 
+            Sed at mauris at odio luctus consectetur non sit amet nisi. Integer ultricies metus et ultricies feugiat. 
+            Cras feugiat nec mauris ut egestas. 
+        </p>
+            <!-- Code Block -->
+            <div class="code-container">
+                <pre><code class="language-python">import requests
+    from bs4 import BeautifulSoup
+    
+    url = "https://www.property24.com/"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "html.parser")
+    
+    print(soup.title.text)</code></pre>
+            </div>
+    
+            <p>
+                Phasellus venenatis neque a quam tincidunt, et pharetra ipsum feugiat. Nulla facilisi. 
+                Donec non volutpat libero. Vivamus non ante eu nulla scelerisque egestas. 
+                Etiam maximus, lacus in malesuada suscipit, mi metus vulputate quam, eget euismod mauris erat a nisi. 
+            </p>
+            <p>
+                Vestibulum id velit eu augue elementum aliquet. Nam rhoncus sapien in odio sagittis laoreet. 
+                Sed at mauris at odio luctus consectetur non sit amet nisi. Integer ultricies metus et ultricies feugiat. 
+                Cras feugiat nec mauris ut egestas. 
+            </p>
+
+
+        <!-- CTA Buttons -->
+        <div class="cta-buttons">
+            <a href="https://github.com/johannesrauschenberger/p24_scraper" target="_blank" class="cta-button github-button">
+                View on GitHub
+            </a>
+            <a href="/projects" class="cta-button projects-button">
+            Back to Projects
+            </a>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+    <p>© 2025 Johannes Rauschenberger. All rights reserved.</p>
+    </footer>
+
+
+<!-- Appear as you scroll --> 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll(".scroll-item"); // Select all scrollable items
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add("visible"); // Add animation
+                    }, index * 200); // Staggered delay for smoother effect
+                    
+                    observer.unobserve(entry.target); // Stop observing after animation
+                }
+            });
+        }, { threshold: 0.2 }); // Trigger when 20% of an element is visible
+    
+        items.forEach(item => observer.observe(item)); // Attach observer to each item
+    });
+</script>
+
+</body>
+</html>
