@@ -56,6 +56,7 @@
         <h1>Property24 Web Scraper in Python</h1>
     </div>
 
+<div class="scroll-item">
     <!-- Author & Date Section -->
     <div class="blog-meta">
         <div class="author-info">
@@ -64,13 +65,16 @@
         </div>
         <p class="post-date">March 21, 2025</p>
     </div>
+</div>
 
+<div class="scroll-item">
     <!-- Horizontal Divider -->
     <hr class="blog-divider">
+</div>
 
     <!-- Blog Content -->
     <main class="blog-post-content">
-        <p>
+        <p class="scroll-item">
             Property24 is South Africa's most widely used web portal for property, both among prospective buyers and renters. 
             At any given time, the site contains more than 300,000 listings ranging from residential, over commercial and industrial 
             all the way to agricultural property. As such it harbours a considerable wealth of data. 
@@ -79,27 +83,31 @@
         </p>
 
 <!-- Image with Caption -->
-<div class="image-container">
-    <figure>
-        <img src="https://johannesrauschenberger.github.io/web/projects/webscraper/img/property24.png" 
-             alt="Property24 Screenshot">
-        <figcaption><a href="https://www.property24.com/" target="_blank">Property24</a> landing page</figcaption>
-    </figure>
+<div class="scroll-item">
+    <div class="image-container">
+        <figure>
+            <img src="https://johannesrauschenberger.github.io/web/projects/webscraper/img/property24.png" 
+                alt="Property24 Screenshot">
+            <figcaption><a href="https://www.property24.com/" target="_blank">Property24</a> landing page</figcaption>
+        </figure>
+    </div>
 </div>
 
-        <p>
+        <p class="scroll-item">
             Phasellus venenatis neque a quam tincidunt, et pharetra ipsum feugiat. Nulla facilisi. 
             Donec non volutpat libero. Vivamus non ante eu nulla scelerisque egestas. 
             Etiam maximus, lacus in malesuada suscipit, mi metus vulputate quam, eget euismod mauris erat a nisi. 
         </p>
-        <p>
+        <p class="scroll-item">
             Vestibulum id velit eu augue elementum aliquet. Nam rhoncus sapien in odio sagittis laoreet. 
             Sed at mauris at odio luctus consectetur non sit amet nisi. Integer ultricies metus et ultricies feugiat. 
             Cras feugiat nec mauris ut egestas. 
         </p>
-            <!-- Code Block -->
-            <div class="code-container">
-                <pre><code class="language-python">import requests
+
+    <!-- Code Block -->
+    <div class="scroll-item">
+        <div class="code-container">
+            <pre><code class="language-python">import requests
     from bs4 import BeautifulSoup
     
     url = "https://www.property24.com/"
@@ -107,21 +115,32 @@
     soup = BeautifulSoup(response.text, "html.parser")
     
     print(soup.title.text)</code></pre>
-            </div>
+        </div>
+    </div>
     
-            <p>
-                Phasellus venenatis neque a quam tincidunt, et pharetra ipsum feugiat. Nulla facilisi. 
-                Donec non volutpat libero. Vivamus non ante eu nulla scelerisque egestas. 
-                Etiam maximus, lacus in malesuada suscipit, mi metus vulputate quam, eget euismod mauris erat a nisi. 
-            </p>
-            <p>
-                Vestibulum id velit eu augue elementum aliquet. Nam rhoncus sapien in odio sagittis laoreet. 
-                Sed at mauris at odio luctus consectetur non sit amet nisi. Integer ultricies metus et ultricies feugiat. 
-                Cras feugiat nec mauris ut egestas. 
-            </p>
+
+        <p class="scroll-item">
+            Phasellus venenatis neque a quam tincidunt, et pharetra ipsum feugiat. Nulla facilisi. 
+            Donec non volutpat libero. Vivamus non ante eu nulla scelerisque egestas. 
+            Etiam maximus, lacus in malesuada suscipit, mi metus vulputate quam, eget euismod mauris erat a nisi. 
+        </p>
+        <!-- Image with Caption -->
+        <div class="image-container">
+            <figure>
+                <img src="https://johannesrauschenberger.github.io/web/projects/webscraper/img/excel.png" 
+                    alt="Excel Screenshot Property24 Data">
+                <figcaption>An excerpt from the Excel output file with compiled data</figcaption>
+            </figure>
+        </div>
+        <p class="scroll-item">
+            Vestibulum id velit eu augue elementum aliquet. Nam rhoncus sapien in odio sagittis laoreet. 
+            Sed at mauris at odio luctus consectetur non sit amet nisi. Integer ultricies metus et ultricies feugiat. 
+            Cras feugiat nec mauris ut egestas. 
+        </p>
 
 
         <!-- CTA Buttons -->
+        <div class="scroll-item">
         <div class="cta-buttons">
             <a href="https://github.com/johannesrauschenberger/p24_scraper" target="_blank" class="cta-button github-button">
                 View on GitHub
@@ -129,6 +148,7 @@
             <a href="/projects" class="cta-button projects-button">
             Back to Projects
             </a>
+        </div>
         </div>
     </main>
     <!-- Footer -->
@@ -156,6 +176,27 @@
           burger.classList.remove("active"); // Optionally reset the burger icon
         });
       });
+    });
+</script>
+
+<!-- Appear as you scroll --> 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll(".scroll-item"); // Select all scrollable items
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add("visible"); // Add animation
+                    }, index * 200); // Staggered delay for smoother effect
+                    
+                    observer.unobserve(entry.target); // Stop observing after animation
+                }
+            });
+        }, { threshold: 0.2 }); // Trigger when 20% of an element is visible
+    
+        items.forEach(item => observer.observe(item)); // Attach observer to each item
     });
 </script>
 
