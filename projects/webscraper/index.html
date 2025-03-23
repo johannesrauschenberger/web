@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property24 Web Scraper</title>
-    <meta name="description" content="Explore my AI, data analysis, and finance projects. Includes Python applications and strategic research.">
+    <meta name="description" content="A Python script written to scrape South African real estate portal Property24.">
     <link rel="icon" href="https://rauschenberger.co.za/img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://johannesrauschenberger.github.io/web/style.css">
@@ -88,33 +88,39 @@
         <figure>
             <img src="https://johannesrauschenberger.github.io/web/projects/webscraper/img/property24.png" 
                 alt="Property24 Screenshot">
-            <figcaption><a href="https://www.property24.com/" target="_blank">Property24</a> landing page</figcaption>
+            <figcaption>The <a href="https://www.property24.com/" target="_blank">Property24</a> landing page</figcaption>
         </figure>
     </div>
 </div>
-
+<div class="spacer"></div>
+        <h2 class="scroll-item">How to start with the script</h2>
         <p class="scroll-item">
-            Phasellus venenatis neque a quam tincidunt, et pharetra ipsum feugiat. Nulla facilisi. 
-            Donec non volutpat libero. Vivamus non ante eu nulla scelerisque egestas. 
-            Etiam maximus, lacus in malesuada suscipit, mi metus vulputate quam, eget euismod mauris erat a nisi. 
+            The first step in writing a web scraping tool in Python is to decide exactly what data you want to extract from the target website.
+            You then examine the site's HTML structure in order to locate the respective elements. In the case of residential listings on
+            Property24, it is quite easy to find the number of bedrooms, bathrooms and parking spaces, in addition to either erf or floor size.
         </p>
+        <div class="image-container">
+            <figure>
+                <img src="https://johannesrauschenberger.github.io/web/projects/webscraper/img/p24_HTML.png" 
+                    alt="Property24 HTML screenshot">
+                <figcaption>The class "p24_featureDetails" contains the list elements "Bedrooms", "Bathrooms",
+                    "Parking Spaces" and "Erf Size"</figcaption>
+            </figure>
+        </div>
         <p class="scroll-item">
-            Vestibulum id velit eu augue elementum aliquet. Nam rhoncus sapien in odio sagittis laoreet. 
-            Sed at mauris at odio luctus consectetur non sit amet nisi. Integer ultricies metus et ultricies feugiat. 
-            Cras feugiat nec mauris ut egestas. 
+            In my case, I also looked for price, property type, location and the URL of each listing. 
+            Finding this information within the website's source code is crucial as the script will later need to be told the 
+            exact name of the elements to look for. CSS class names are case sentsitive, e.g. the script needs to look for
+            p24_featureDetails, and would not find any data for P24_FeatureDetails.
         </p>
 
     <!-- Code Block -->
     <div class="scroll-item">
         <div class="code-container">
-            <pre><code class="language-python">import requests
-    from bs4 import BeautifulSoup
-    
-    url = "https://www.property24.com/"
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, "html.parser")
-    
-    print(soup.title.text)</code></pre>
+            <pre><code class="language-python">from bs4 import BeautifulSoup   
+import requests
+import xlsxwriter
+from datetime import datetime</code></pre>
         </div>
     </div>
     
