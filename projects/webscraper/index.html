@@ -100,42 +100,6 @@
 </p>
 
 <div class="spacer"></div>
-        <h2 class="scroll-item">How to start with the script</h2>
-        <p class="scroll-item">
-            The first step in writing a web scraping tool in Python is to decide exactly what data you want to extract from the target website.
-            You then examine the site's HTML structure in order to locate the respective elements. In the case of residential listings on
-            Property24, it is quite easy to find the number of bedrooms, bathrooms and parking spaces, in addition to either erf or floor size.
-        </p>
-        <div class="image-container">
-            <figure>
-                <img src="https://johannesrauschenberger.github.io/web/projects/webscraper/img/p24_HTML.png" 
-                    alt="Property24 HTML screenshot">
-                <figcaption>The class "p24_featureDetails" contains the list elements "Bedrooms", "Bathrooms",
-                    "Parking Spaces" and "Erf Size"</figcaption>
-            </figure>
-        </div>
-        <p class="scroll-item">
-            In my case, I also looked for price, property type, location and the URL of each listing. 
-            Finding this information within the website's source code is crucial as the script will later need to be told the 
-            exact name of the elements to look for. CSS class names are case sentsitive, e.g. the script needs to look for
-            p24_featureDetails, and would not find any data for P24_FeatureDetails.
-        </p>
-
-    <!-- Code Block -->
-    <div class="scroll-item">
-        <div class="code-container">
-            <pre><code class="language-python">from bs4 import BeautifulSoup   
-import requests
-import xlsxwriter
-from datetime import datetime</code></pre>
-        </div>
-    </div>
-    
-
-        <p class="scroll-item">
-            The complete code is linked in the GitHub repository below.
-        </p>
-<div class="spacer"></div>
         <h2 class="scroll-item">Final Data Output</h2>
         <p class="scroll-item">
             The tool ultimately outputs an excel file containing all the listings with their respective price, property type, location, number of bedrooms and number of bathrooms. This can then be cleaned, transformed and analysed.
@@ -152,14 +116,9 @@ from datetime import datetime</code></pre>
 
         <!-- CTA Buttons -->
         <div class="scroll-item">
-        <div class="cta-buttons">
-            <a href="https://github.com/johannesrauschenberger/p24_scraper" target="_blank" class="cta-button github-button">
-                View on GitHub
-            </a>
             <a href="/projects" class="cta-button projects-button">
             Back to Projects
             </a>
-        </div>
         </div>
     </main>
     <!-- Footer -->
