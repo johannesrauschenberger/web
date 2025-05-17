@@ -856,16 +856,6 @@ html, body {
   color: #333;
 }
 
-.blog-post-content a {
-  color: #0077cc;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.blog-post-content a:hover {
-  text-decoration: underline;
-}
-
 
 /* 🔹 Back to Blog Button */
 .blog-back {
@@ -965,4 +955,14 @@ html, body {
 
 .projects-button:hover {
   background-color: #006666;
+}
+
+.inline-link {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
 }
