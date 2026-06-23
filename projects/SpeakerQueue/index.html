@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SpeakerQueue: Real-Time Speaking Queue Management</title>
+  <meta name="description" content="SpeakerQueue is a real-time web application for managing speaking requests during moderated meetings. Built with Node.js, Express, Socket.IO and Vanilla JavaScript.">
+
+  <link rel="icon" href="https://github.com/johannesrauschenberger/web/blob/main/img/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6F7TL9W0EN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-6F7TL9W0EN');
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="/"><img src="https://johannesrauschenberger.github.io/web/img/logo.png" alt="Logo"></a>
+    </div>
+
+    <div class="burger-menu" id="burgerMenu">
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+      <span class="burger-bar"></span>
+    </div>
+
+    <div class="nav-links-container">
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="https://www.linkedin.com/in/johannesrauschenberger/" target="_blank" class="linkedin-button">in</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="teal-banner">
+    <h1>SpeakerQueue: Real-Time Speaking Queue Management</h1>
+    <p>A lightweight web application for managing speaking requests during moderated meetings.</p>
+  </section>
+
+  <!-- Author & Date -->
+  <div class="scroll-item">
+    <div class="blog-meta">
+      <div class="author-info">
+        <img src="https://rauschenberger.co.za/img/profile2.jpg" alt="Johannes Rauschenberger" class="author-pic">
+        <p class="author-name">Johannes Rauschenberger</p>
+      </div>
+      <p class="post-date">23 June 2026</p>
+    </div>
+  </div>
+
+  <div class="scroll-item">
+    <hr class="blog-divider">
+  </div>
+
+  <main class="blog-post-content">
+
+    <p class="scroll-item">
+      SpeakerQueue is a lightweight, browser-based web application for managing speaking requests during moderated meetings. It was originally developed to support university senate meetings, where keeping track of speaking requests manually had become cumbersome and occasionally distracting.
+    </p>
+
+    <div class="scroll-item">
+      <div class="image-container">
+        <figure>
+          <img src="https://rauschenberger.co.za/img/landing.png" alt="SpeakerQueue landing page">
+          <figcaption>The landing page where a meeting host creates a new meeting.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <section class="scroll-item">
+      <h2>The Problem</h2>
+      <p class="no-dropcap">
+        The objective was not to create another video conferencing platform. Many of these meetings either take place in person or in a hybrid format anyway. SpeakerQueue was designed to solve one specific problem well: managing speaking requests in an organised, unobtrusive and intuitive way.
+      </p>
+      <p class="no-dropcap">
+        In meetings with many participants, handwritten notes or memory quickly become unreliable. The chair needs a simple way to see who wishes to speak, who is currently speaking, and who should be called next.
+      </p>
+    </section>
+
+    <section class="scroll-item">
+      <h2>Design Constraints</h2>
+
+      <div class="case-study-grid">
+        <div class="case-study-card">
+          <h3>Functional Goals</h3>
+          <ul>
+            <li>Browser-based</li>
+            <li>No installation required</li>
+            <li>Mobile-friendly</li>
+            <li>Real-time synchronisation</li>
+            <li>Simple enough for non-technical users</li>
+          </ul>
+        </div>
+
+        <div class="case-study-card">
+          <h3>Technical Goals</h3>
+          <ul>
+            <li>No database</li>
+            <li>No authentication for the MVP</li>
+            <li>No paid infrastructure</li>
+            <li>Minimal dependencies</li>
+            <li>Easy deployment</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="scroll-item">
+      <h2>Technical Architecture</h2>
+      <p class="no-dropcap">
+        The application uses a Node.js and Express backend with Socket.IO for real-time communication. The frontend is written in HTML, CSS and Vanilla JavaScript. No frontend framework was used.
+      </p>
+
+      <div class="tech-badges">
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>Socket.IO</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Vanilla JavaScript</span>
+        <span>QR Code Generation</span>
+        <span>Render</span>
+      </div>
+
+      <p class="no-dropcap">
+        Server-side state is held in memory, which significantly simplifies deployment while matching the intended use case of short-lived meetings.
+      </p>
+    </section>
+
+    <section class="scroll-item">
+      <h2>Host Workflow</h2>
+      <p class="no-dropcap">
+        The host dashboard is the centre of the application. It displays the current speaker, live speaking queue, connected participants, meeting information, QR code, participant link and moderation controls.
+      </p>
+
+      <div class="image-container">
+        <figure>
+          <img src="https://rauschenberger.co.za/img/host.png" alt="SpeakerQueue host dashboard">
+          <figcaption>The live host dashboard during an active meeting.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="scroll-item">
+      <h2>Participant Experience</h2>
+      <p class="no-dropcap">
+        Participants join from their own mobile devices by scanning a QR code or opening the participant link. They enter their name, select their role and use a large mobile-friendly control to raise or lower their hand.
+      </p>
+
+      <div class="image-container">
+        <figure>
+          <img src="https://rauschenberger.co.za/img/participant.png" alt="SpeakerQueue participant interface">
+          <figcaption>The participant interface as viewed on a smartphone.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="scroll-item">
+      <h2>Development Process</h2>
+      <p class="no-dropcap">
+        SpeakerQueue was developed incrementally using a checkpoint-based workflow. Each checkpoint introduced one meaningful piece of functionality before moving on to the next.
+      </p>
+
+      <div class="timeline">
+        <div>Express server</div>
+        <div>Dynamic meeting URLs</div>
+        <div>Socket.IO communication</div>
+        <div>Named participant joining</div>
+        <div>Raise-hand queue</div>
+        <div>Host moderation controls</div>
+        <div>Cloud deployment</div>
+        <div>UI refinement</div>
+      </div>
+    </section>
+
+    <section class="scroll-item">
+      <h2>Project Statistics</h2>
+
+      <div class="case-study-grid">
+        <div class="case-study-card">
+          <h3>Engineering</h3>
+          <ul>
+            <li>20+ development checkpoints</li>
+            <li>Real-time multi-user architecture</li>
+            <li>100% Vanilla JavaScript frontend</li>
+          </ul>
+        </div>
+
+        <div class="case-study-card">
+          <h3>Deployment</h3>
+          <ul>
+            <li>Hosted on Render Free Tier</li>
+            <li>Zero database</li>
+            <li>Zero paid infrastructure</li>
+            <li>QR-code based meeting joining</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="scroll-item">
+      <h2>Lessons Learned</h2>
+      <p class="no-dropcap">
+        This project provided practical experience with real-time web applications, Socket.IO event architecture, state management, iterative development, Git workflows, cloud deployment, responsive interface design and UX refinement through user feedback.
+      </p>
+      <p class="no-dropcap">
+        More importantly, it reinforced the value of solving a real problem for a real user rather than building technology for its own sake.
+      </p>
+    </section>
+
+    <section class="scroll-item">
+      <h2>Personal Reflection</h2>
+      <p class="no-dropcap">
+        SpeakerQueue is one of the most satisfying software projects I have worked on because it was never intended to be a portfolio exercise. It began with a genuine operational problem encountered during my wife's university senate meetings, where managing speaking requests manually became increasingly distracting as meetings grew larger.
+      </p>
+      <p class="no-dropcap">
+        Rather than trying to build a feature-rich meeting platform, I deliberately focused on solving one specific problem exceptionally well. Every design decision was measured against a simple question: "Does this genuinely make the chair's job easier?"
+      </p>
+      <p class="no-dropcap">
+        Perhaps the most rewarding aspect was seeing the application used almost immediately by the person it was designed for. Building software that genuinely improves someone's workflow is far more satisfying than creating technology for its own sake.
+      </p>
+    </section>
+
+    <section class="scroll-item">
+      <h2>Live Demo & Source Code</h2>
+      <p class="no-dropcap">
+        The application is publicly accessible and the source code is available on GitHub. The repository also preserves the development history, making it possible to follow the project's evolution from a basic Express server to a deployed real-time web application.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="https://speakerqueue.onrender.com" target="_blank" class="cta-button projects-button">
+          Live Demo
+        </a>
+        <a href="https://github.com/johannesrauschenberger/SpeakerQueue" target="_blank" class="cta-button github-button">
+          View Source Code
+        </a>
+      </div>
+    </section>
+
+    <section class="scroll-item">
+      <h2>Conclusion</h2>
+      <p class="no-dropcap">
+        SpeakerQueue demonstrates how thoughtful engineering and iterative development can solve a genuine operational problem without unnecessary complexity. What began as a small utility for university senate meetings evolved into a polished, real-time web application that remains focused on a single objective: making moderated discussions easier to manage.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="/projects" class="cta-button projects-button">
+          Back to Projects
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Johannes Rauschenberger. All rights reserved.</p>
+  </footer>
+
+  <!-- Burger Menu Script for mobile -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const burger = document.getElementById("burgerMenu");
+      const navLinks = document.querySelector(".nav-links-container");
+      const navItems = document.querySelectorAll(".nav-links li a");
+
+      burger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        burger.classList.toggle("active");
+      });
+
+      navItems.forEach(item => {
+        item.addEventListener("click", function () {
+          navLinks.classList.remove("active");
+          burger.classList.remove("active");
+        });
+      });
+    });
+  </script>
+
+  <!-- Appear as you scroll -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".scroll-item");
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add("visible");
+            }, index * 200);
+
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      items.forEach(item => observer.observe(item));
+    });
+  </script>
+
+</body>
+</html>
